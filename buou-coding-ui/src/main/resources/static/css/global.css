@@ -1040,7 +1040,7 @@ button:focus {
 
 @media (max-width: 768px) {
   #registerModal .modal-content .modal-body .tabpane-container,
-  #loginModal .modal-content .modal-body .login-main, #loginModal .modal-footer {
+  #loginModal .modal-content .modal-body .tabpane-container, #loginModal .modal-footer {
     display: none;
   }
 
