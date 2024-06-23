@@ -9,7 +9,7 @@
     </sql>
 
     <sql id="zsxqWhitesByParams">
-        where a.deleted = ${@YesOrNoEnum@NO.code}
+        where a.deleted = ${@com.github.buoooou.api.model.enums.YesOrNoEnum@NO.code}
         <if test="searchParams.userCode != null and searchParams.userCode != ''">
             and u.user_name like concat('%', #{searchParams.userCode}, '%')
         </if>

@@ -69,7 +69,7 @@
     </select>
 
     <sql id="articlesByParams">
-        where a.deleted = ${@YesOrNoEnum@NO.code}
+        where a.deleted = ${@com.github.buoooou.api.model.enums.YesOrNoEnum@NO.code}
         <if test="searchParams.title != null and searchParams.title != ''">
             and a.title like concat('%', #{searchParams.title}, '%')
         </if>
