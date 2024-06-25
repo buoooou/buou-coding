@@ -93,7 +93,7 @@ public class SidebarServiceImpl implements SidebarService {
         return new SideBarDTO()
                 .setTitle("关于布欧社区")
                 // todo 补充公告图片和地址
-                .setImg("")
+                .setImg("/forum/image/actor.png")
                 .setUrl("")
                 .setItems(items)
                 .setStyle(SidebarStyleEnum.NOTICE.getStyle());
