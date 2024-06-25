@@ -40,10 +40,10 @@ public class PaiAiDemoServiceImpl extends AbsChatService {
             item.appendAnswer(qa(item.getQuestion()));
             consumer.accept(AiChatStatEnum.FIRST, response);
 
-            AsyncUtil.sleep(1200);
-            item.appendAnswer("\n" + qa(item.getQuestion()));
-            item.setAnswerType(ChatAnswerTypeEnum.STREAM_END);
-            consumer.accept(AiChatStatEnum.END, response);
+//            AsyncUtil.sleep(1200);
+//            item.appendAnswer("\n" + qa(item.getQuestion()));
+//            item.setAnswerType(ChatAnswerTypeEnum.STREAM_END);
+//            consumer.accept(AiChatStatEnum.END, response);
         });
         return AiChatStatEnum.END;
     }

@@ -19,7 +19,7 @@ public enum AISourceEnum {
     /**
      * 技术派的模拟AI
      */
-    PAI_AI(2, "技术派"),
+    PAI_AI(2, "布欧GPT"),
     /**
      * 讯飞
      */
