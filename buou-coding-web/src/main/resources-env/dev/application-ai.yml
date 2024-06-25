@@ -43,9 +43,15 @@ chatgpt:
     normal: 50
     vip: 100
 
+# 硅基AI
+silicon:
+  hostUrl: https://api.siliconflow.cn/v1/chat/completions
+  model: THUDM/chatglm3-6b
+  keys:
+    -
 
 
-# 讯飞AI
+    # 讯飞AI
 xunfei:
   hostUrl: http://spark-api.xf-yun.com/v2.1/chat
   domain: "generalv2"

@@ -23,9 +23,13 @@ public enum AISourceEnum {
     /**
      * 讯飞
      */
-    XUN_FEI_AI(3,"讯飞") {
+    XUN_FEI_AI(3, "讯飞"),
+    /**
+     * 硅基
+     */
+    SILICON_CLOUD(4, "硅基") {
         @Override
-        public boolean syncSupport() {
+        public boolean asyncSupport() {
             return false;
         }
     },

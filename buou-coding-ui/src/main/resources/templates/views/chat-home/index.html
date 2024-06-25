@@ -32,9 +32,9 @@
                             <div th:switch="${global.user.starStatus.code}">
                                 <a th:case="-1"
                                    href="#"
-                                  class="annotation"
-                                  data-target="#registerModal"
-                                  data-toggle="modal"
+                                   class="annotation"
+                                   data-target="#registerModal"
+                                   data-toggle="modal"
                                 >绑定，提升每天对话次数</a>
                                 <span th:case="0" class="annotation">审核中</span>
                                 <span th:case="1" class="annotation">试用中，添加管理员微信 kafeihu92 催审核</span>
@@ -52,6 +52,7 @@
                 <!-- 加一个下拉框，选项是 OpenAI 布欧GPT -->
                 <div class="chat-type">
                     <select class="styled-dropdown" id="chat-type">
+                        <option value="SILICON_CLOUD">硅基GPT</option>
                         <option value="CHAT_GPT_3_5">OpenAI</option>
                         <option value="PAI_AI">布欧GPT</option>
                     </select>
@@ -61,10 +62,27 @@
             </div>
 
             <div class="chat-input">
-                <textarea id="input-field" class="form-control" rows="3" placeholder="你好，我是布欧，快登录和我对线吧" disabled></textarea>
+                <textarea id="input-field" class="form-control" rows="3" placeholder="你好，我是布欧，快登录和我对线吧"
+                          disabled></textarea>
                 <button id="send-btn" disabled>
                     <div class="button_icon-button-icon__qlUH3 no-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" fill="none"><defs><path id="send-white_svg__a" d="M0 0h16v16H0z"></path></defs><g><mask id="send-white_svg__b" fill="#fff"><use xlink:href="#send-white_svg__a"></use></mask><g mask="url(#send-white_svg__b)"><path transform="translate(1.333 2)" d="M0 4.71 6.67 6l1.67 6.67L12.67 0 0 4.71Z" style="stroke: rgb(255, 255, 255); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path><path transform="translate(8.003 6.117)" d="M0 1.89 1.89 0" style="stroke: rgb(255, 255, 255); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path></g></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
+                             height="16" fill="none">
+                            <defs>
+                                <path id="send-white_svg__a" d="M0 0h16v16H0z"></path>
+                            </defs>
+                            <g>
+                                <mask id="send-white_svg__b" fill="#fff">
+                                    <use xlink:href="#send-white_svg__a"></use>
+                                </mask>
+                                <g mask="url(#send-white_svg__b)">
+                                    <path transform="translate(1.333 2)" d="M0 4.71 6.67 6l1.67 6.67L12.67 0 0 4.71Z"
+                                          style="stroke: rgb(255, 255, 255); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path>
+                                    <path transform="translate(8.003 6.117)" d="M0 1.89 1.89 0"
+                                          style="stroke: rgb(255, 255, 255); stroke-width: 1.33333; stroke-opacity: 1; stroke-dasharray: 0, 0;"></path>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                     <div class="button_icon-button-text__k3vob">等待登录</div>
                 </button>
@@ -392,5 +410,6 @@
             e.preventDefault();
         }
     });
+
 </script>
 </html>
