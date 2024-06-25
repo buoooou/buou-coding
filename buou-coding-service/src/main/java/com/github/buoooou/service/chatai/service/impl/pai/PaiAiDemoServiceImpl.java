@@ -49,9 +49,10 @@ public class PaiAiDemoServiceImpl extends AbsChatService {
     }
 
     private String qa(String q) {
-        String ans = q.replace("吗", "");
-        ans = StringUtils.replace(ans, "？", "!");
-        ans = StringUtils.replace(ans, "?", "!");
+//        String ans = q.replace("吗", "");
+//        ans = StringUtils.replace(ans, "？", "!");
+//        ans = StringUtils.replace(ans, "?", "!");
+        String ans = "super宇宙模型，研发中，敬请期待";
         return ans;
     }
 
