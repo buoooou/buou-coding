@@ -42,7 +42,7 @@ security:
 
 paicoding:
   sensitive: # 敏感词校验相关配置
-    enable: true
+    enable: false
     deny: # 自定义的敏感词，英文逗号分割
     allow: # 自定义的非敏感词，英文逗号分割
   jwt:

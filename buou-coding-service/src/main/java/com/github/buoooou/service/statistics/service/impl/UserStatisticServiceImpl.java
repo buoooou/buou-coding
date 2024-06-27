@@ -36,6 +36,9 @@ public class UserStatisticServiceImpl implements UserStatisticService {
      * @return
      */
     public int getOnlineUserCnt() {
+        if (onlineUserCnt.get() <= 0) {
+            return 1;
+        }
         return onlineUserCnt.get();
     }
 

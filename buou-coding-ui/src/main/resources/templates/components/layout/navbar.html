@@ -280,15 +280,6 @@
                         >
                             随机新用户
                         </button>
-
-                        <button
-                                id="mockLogin"
-                                type="button"
-                                th:data-verify-code="''"
-                                class="btn btn-sm btn-dark"
-                        >
-                            一键登录
-                        </button>
                     </div>
 
                 </div>
@@ -320,13 +311,6 @@
                                 <form id="register-form">
                                     <div class="form-group">
                                         <input type="text"
-                                               placeholder="VIP码，加管理员微信分配"
-                                               class="form-control form-control-sm"
-                                               id="starNumber"
-                                               autocomplete="off">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text"
                                                placeholder="用户名密码登录时用"
                                                class="form-control form-control-sm"
                                                id="registerUser" required>
@@ -334,6 +318,13 @@
                                     <div class="form-group">
                                         <input type="password" placeholder="密码，你自己能记得住的"
                                                class="form-control form-control-sm" id="registerPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text"
+                                               placeholder="VIP码，加管理员微信分配，也可不填"
+                                               class="form-control form-control-sm"
+                                               id="starNumber"
+                                               autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" placeholder="根据管理员获取邀请码，也可不填"
@@ -627,6 +618,8 @@
         }
       });
     }
+
+
 
 
 
