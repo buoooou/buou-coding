@@ -16,7 +16,7 @@ public enum ConfigTypeEnum {
     SIDE_PAGE(2, "侧边Banner"),
     ADVERTISEMENT(3, "广告Banner"),
     NOTICE(4, "公告"),
-    COLUMN(5, "教程"),
+    COLUMN(5, "专栏"),
     PDF(6, "电子书");
 
     ConfigTypeEnum(Integer code, String desc) {
