@@ -15,7 +15,7 @@ public class AlarmUtil extends AppenderBase<ILoggingEvent> {
     protected void append(ILoggingEvent iLoggingEvent) {
         if (canAlarm()) {
             EmailUtil.sendMail(iLoggingEvent.getLoggerName(),
-                    SpringUtil.getConfig("alarm.user", "xhhuiblog@163.com"),
+                    SpringUtil.getConfig("alarm.user", "zhangkuo921112@icloud.com"),
                     iLoggingEvent.getFormattedMessage());
         }
     }
