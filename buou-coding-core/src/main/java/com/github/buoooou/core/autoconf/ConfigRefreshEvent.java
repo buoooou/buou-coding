@@ -1,4 +1,4 @@
-package com.github.buoooou.api.model.event;
+package com.github.buoooou.core.autoconf;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

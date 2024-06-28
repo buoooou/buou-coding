@@ -18,7 +18,7 @@ public class EmailUtil {
         if (from == null) {
             synchronized (EmailUtil.class) {
                 if (from == null) {
-                    from = SpringUtil.getConfig("spring.mail.from", "xhhuiblog@163.com");
+                    from = SpringUtil.getConfig("spring.mail.from", "769329489@qq.com");
                 }
             }
         }
@@ -44,7 +44,6 @@ public class EmailUtil {
             //邮件内容，第二个参数设置为true，支持html模板
             mimeMessageHelper.setText(content, true);
             // 解决 JavaMailSender no object DCH for MIME type multipart/mixed 问题
-            // 详情参考：[Email发送失败问题记录 - 一灰灰Blog](https://blog.hhui.top/hexblog/2021/10/28/211028-Email%E5%8F%91%E9%80%81%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/)
             Thread.currentThread().setContextClassLoader(EmailUtil.class.getClassLoader());
             javaMailSender.send(mimeMailMessage);
             return true;

@@ -1,6 +1,5 @@
 package com.github.buoooou.core.autoconf;
 
-import com.github.buoooou.api.model.event.ConfigRefreshEvent;
 import com.github.buoooou.core.autoconf.property.SpringValueRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

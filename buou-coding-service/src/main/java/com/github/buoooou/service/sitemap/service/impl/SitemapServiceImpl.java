@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class SitemapServiceImpl implements SitemapService {
-    @Value("${view.site.host:https://paicoding.com}")
+    @Value("${view.site.siteHost:https://buoucoding.com}")
     private String host;
     private static final int SCAN_SIZE = 100;
 
@@ -47,6 +47,7 @@ public class SitemapServiceImpl implements SitemapService {
 
     /**
      * 查询站点地图
+     *
      * @return 返回站点地图
      */
     public SiteMapVo getSiteMap() {

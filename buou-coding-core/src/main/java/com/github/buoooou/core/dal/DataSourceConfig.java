@@ -104,7 +104,7 @@ public class DataSourceConfig {
      * @return
      */
     @Bean
-    @ConditionalOnExpression(value = "T(com.github.paicoding.forum.core.dal.DruidCheckUtil).hasDuridPkg()")
+    @ConditionalOnExpression(value = "T(com.github.buoooou.core.dal.DruidCheckUtil).hasDuridPkg()")
     public ServletRegistrationBean<?> druidStatViewServlet() {
         //先配置管理后台的servLet，访问的入口为/druid/
         ServletRegistrationBean<?> servletRegistrationBean = new ServletRegistrationBean<>(

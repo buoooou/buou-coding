@@ -1,12 +1,12 @@
 package com.github.buoooou.service.config.service.impl;
 
-import com.github.buoooou.api.model.event.ConfigRefreshEvent;
 import com.github.buoooou.api.model.exception.ExceptionUtil;
 import com.github.buoooou.api.model.vo.PageVo;
 import com.github.buoooou.api.model.vo.config.GlobalConfigReq;
 import com.github.buoooou.api.model.vo.config.SearchGlobalConfigReq;
 import com.github.buoooou.api.model.vo.config.dto.GlobalConfigDTO;
 import com.github.buoooou.api.model.vo.constants.StatusEnum;
+import com.github.buoooou.core.autoconf.ConfigRefreshEvent;
 import com.github.buoooou.core.senstive.SensitiveProperty;
 import com.github.buoooou.core.senstive.SensitiveService;
 import com.github.buoooou.core.util.NumUtil;

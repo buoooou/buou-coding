@@ -1,41 +1,41 @@
 <div class="home-carouse-wrap" id="carouseWrap">
-  <div class="home-carouse-inter-wrap">
-    <div class="home-carouse-item" th:each="article,iter : ${vo.topArticles}">
-      <a th:href="${'/article/detail/' + article.articleId}">
-        <img
-          th:src="${article.cover}"
-          th:id="'cover' + ${iter.index}"
-        />
-        <div class="home-carouse-item-body">
-          <div class="home-carouse-item-title" th:text="${article.title}"></div>
-          <div class="home-carouse-item-tag">
-            <span class="home-carouse-item-dot tag"></span>
+    <div class="home-carouse-inter-wrap">
+        <div class="home-carouse-item" th:each="article,iter : ${vo.topArticles}">
+            <a th:href="${'/article/detail/' + article.articleId}">
+                <img
+                        th:src="${article.cover}"
+                        th:id="'cover' + ${iter.index}"
+                />
+                <div class="home-carouse-item-body">
+                    <div class="home-carouse-item-title" th:text="${article.title}"></div>
+                    <div class="home-carouse-item-tag">
+                        <span class="home-carouse-item-dot tag"></span>
 
-            <span
-              class="home-carouse-item-first-text"
-              th:each="tag: ${article.tags}"
-              th:text="${tag.tag}"
-            >
+                        <span
+                                class="home-carouse-item-first-text"
+                                th:each="tag: ${article.tags}"
+                                th:text="${tag.tag}"
+                        >
               JAVASCRIPT
             </span>
-          </div>
-          <!-- <object> -->
-          <div class="home-carouse-item-tag">
-            <span class="home-carouse-item-dot"></span>
-            <!-- <a th:href="${'/user/' + article.author}"> -->
-            <span th:text="${article.authorName}" class="author">楼仔，</span>
-            <!-- </a> -->
-            <span
-              th:text="'，' + ${#dates.format(article.createTime, 'yyyy/MM/dd')}"
-            >
+                    </div>
+                    <!-- <object> -->
+                    <div class="home-carouse-item-tag">
+                        <span class="home-carouse-item-dot"></span>
+                        <!-- <a th:href="${'/user/' + article.author}"> -->
+                        <span th:text="${article.authorName}" class="author">buou</span>
+                        <!-- </a> -->
+                        <span
+                                th:text="'，' + ${#dates.format(article.createTime, 'yyyy/MM/dd')}"
+                        >
               2022/10/28
             </span>
-          </div>
-          <!-- </object> -->
+                    </div>
+                    <!-- </object> -->
+                </div>
+            </a>
         </div>
-      </a>
     </div>
-  </div>
 </div>
 
 <script src="/js/color-thief.umd.js" th:src="${global.siteInfo.oss + '/js/color-thief.umd.js'}"></script>
@@ -66,4 +66,5 @@
       setColor()
     })
   }
+
 </script>

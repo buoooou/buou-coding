@@ -46,7 +46,7 @@ public class SiliconCloudServiceImpl extends AbsChatService {
 
             chat.appendAnswer(responseData.getChoices().get(0).getMessage().getContent());
             if (log.isDebugEnabled()) {
-                log.debug("ChatGpt返回内容: {}", rep.message());
+                log.debug("siliconCloud返回内容: {}", responseData);
             }
         } catch (IOException e) {
             log.warn("silicon 连接失败! {}", chat, e);

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
-  <head th:fragment="head(title, links, scripts)">
+<head th:fragment="head(title, links, scripts)">
     <title
-      th:replace="${title}"
-      th:text="${global.siteInfo == null ? '' : global.siteInfo.websiteName}"
+            th:replace="${title}"
+            th:text="${global.siteInfo == null ? '' : global.siteInfo.websiteName}"
     >
-      布欧社区
+        布欧社区
     </title>
-    <meta name="baidu-site-verification" content="codeva-mbGuu7l4Q1" />
+    <meta name="baidu-site-verification" content="codeva-eir54hQYLf"/>
     <meta
-      name="keywords"
-      content="布欧社区,开源社区,java,spring boot,IT,程序员,开发者,mysql,redis"
-      th:if="${global.ogp == null}"
+            name="keywords"
+            content="布欧社区,开源社区,java,spring boot,IT,程序员,开发者,mysql,redis"
+            th:if="${global.ogp == null}"
     />
     <meta name="description"
           th:if="${global.ogp == null}"
           content="布欧社区，一个基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等技术栈实现的社区系统，采用主流的互联网技术架构、全新的UI设计、支持一键源码部署，拥有完整的文章&教程发布/搜索/评论/统计流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发/实战的现代化社区项目👍 。"
     />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="robots" content="all">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -30,12 +31,15 @@
     <script type="application/ld+json" th:utext="${global.jsonLd}"></script>
 
     <link rel="icon" href="/img/icon.png" th:href="${global.siteInfo.oss + '/img/icon.png'}"/>
-    <link href="/css/three/index.css" th:href="@{{oss}/css/three/index.css(oss=${global.siteInfo.oss})}" rel="stylesheet" />
-    <link href="/css/three/highlightjs.github.min.css" th:href="${global.siteInfo.oss + '/css/three/highlightjs.github.min.css'}" rel="stylesheet" />
-    <link href="/css/three/nprogress.css" th:href="${global.siteInfo.oss + '/css/three/nprogress.css'}" rel="stylesheet" />
-    <link href="/css/global.css" th:href="${global.siteInfo.oss + '/css/global.css'}" rel="stylesheet" />
-    <link href="/css/common.css" th:href="${global.siteInfo.oss + '/css/common.css'}" rel="stylesheet" />
-    <link href="/katex/katex.css" th:href="${global.siteInfo.oss + '/katex/katex.css'}" rel="stylesheet" >
+    <link href="/css/three/index.css" th:href="@{{oss}/css/three/index.css(oss=${global.siteInfo.oss})}"
+          rel="stylesheet"/>
+    <link href="/css/three/highlightjs.github.min.css"
+          th:href="${global.siteInfo.oss + '/css/three/highlightjs.github.min.css'}" rel="stylesheet"/>
+    <link href="/css/three/nprogress.css" th:href="${global.siteInfo.oss + '/css/three/nprogress.css'}"
+          rel="stylesheet"/>
+    <link href="/css/global.css" th:href="${global.siteInfo.oss + '/css/global.css'}" rel="stylesheet"/>
+    <link href="/css/common.css" th:href="${global.siteInfo.oss + '/css/common.css'}" rel="stylesheet"/>
+    <link href="/katex/katex.css" th:href="${global.siteInfo.oss + '/katex/katex.css'}" rel="stylesheet">
     <script>
       var _hmt = _hmt || [];
       (function() {
@@ -44,6 +48,7 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
+
     </script>
 
     <script src="/js/jquery.min.js" th:src="${global.siteInfo.oss + '/js/jquery.min.js'}"></script>
@@ -64,10 +69,11 @@
     <script src="/js/highlight.min.js" th:src="${global.siteInfo.oss + '/js/highlight.min.js'}"></script>
     <script src="/js/nprogress.js" th:src="${global.siteInfo.oss + '/js/nprogress.js'}"></script>
     <script defer src="/katex/katex.js" th:src="${global.siteInfo.oss + '/katex/katex.js'}"></script>
-    <script defer src="/katex/contrib/auto-render.js" th:src="${global.siteInfo.oss + '/katex/contrib/auto-render.js'}"></script>
+    <script defer src="/katex/contrib/auto-render.js"
+            th:src="${global.siteInfo.oss + '/katex/contrib/auto-render.js'}"></script>
     <script src="/js/mathjax-config.js" th:src="${global.siteInfo.oss + '/js/mathjax-config.js'}" defer></script>
 
-    <th:block th:replace="${links}" />
-    <th:block th:replace="${scripts}" />
-  </head>
+    <th:block th:replace="${links}"/>
+    <th:block th:replace="${scripts}"/>
+</head>
 </html>
