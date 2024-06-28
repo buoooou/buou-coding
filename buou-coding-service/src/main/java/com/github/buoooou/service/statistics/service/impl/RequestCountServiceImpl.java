@@ -1,12 +1,14 @@
 package com.github.buoooou.service.statistics.service.impl;
 
 import com.github.buoooou.api.model.vo.statistics.dto.StatisticsDayDTO;
+import com.github.buoooou.core.util.IpUtil;
 import com.github.buoooou.service.statistics.repository.dao.RequestCountDao;
 import com.github.buoooou.service.statistics.repository.entity.RequestCountDO;
 import com.github.buoooou.service.statistics.service.RequestCountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -35,6 +37,11 @@ public class RequestCountServiceImpl implements RequestCountService {
         try {
             requestCountDO = new RequestCountDO();
             requestCountDO.setHost(host);
+
+            if (StringUtils.hasLength(host)) {
+                // ip不同，需要更新
+                requestCountDO.setZone(IpUtil.getLocationByIp(host).toRegionStr());
+            }
             requestCountDO.setCnt(1);
             requestCountDO.setDate(Date.valueOf(LocalDate.now()));
             requestCountDao.save(requestCountDO);
