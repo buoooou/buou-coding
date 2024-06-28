@@ -95,7 +95,7 @@ public class SitemapServiceImpl implements SitemapService {
         String time = DateUtil.time2utc(System.currentTimeMillis());
         vo.addUrl(new SiteUrlVo(host + "/", time));
         vo.addUrl(new SiteUrlVo(host + "/column", time));
-        vo.addUrl(new SiteUrlVo(host + "/admin-view", time));
+        vo.addUrl(new SiteUrlVo(host + "/chat", time));
         return vo;
     }
 
