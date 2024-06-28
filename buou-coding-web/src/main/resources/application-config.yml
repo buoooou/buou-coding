@@ -4,16 +4,17 @@ view:
     zsxqArticleReadCount: 20 # 知识星球用户才能阅读的文章阅读次数统计间隔，单位：分钟
     websiteName: 布欧社区
     websiteLogoUrl: https://buoucoding.com/img/icon.png
-    websiteFaviconIconUrl: https://paicoding.com/img/icon.png
+    websiteFaviconIconUrl: https://buoucoding.com/img/icon.png
     zsxqUrl: https://buoucoding.com/article/detail/314
     zsxqPosterUrl: forum/image/wxpay.png
     contactMeTitle: 联系我 - kafeihu92
     contactMeWxQrCode: forum/image/actor.png
-    contactMeStarQrCode: https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/qiye-weixin.png
+    contactMeStarQrCode: forum/image/wxpay.png
     pageSize: 20
     cdnImgStyle:
     websiteRecord: 我的super备案
     wxLoginUrl: http://weixin.qq.com/r/WxwpMefE-rqBraNS90lJ
     host: http://127.0.0.1:${server.port}
+    siteHost: https://buoucoding.com
     welcomeInfo: 欢迎来到布欧社区，戳<a href="/article/detail/15">布欧社区全方位视角解读</a>了解我们
     oss:

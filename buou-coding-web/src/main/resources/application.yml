@@ -73,7 +73,7 @@ knife4j:
     concat:
       - 布欧
     license: Apache License 2.0
-    license-url: https://github.com/itwanger/paicoding/blob/main/License
+    license-url: https://github.com/buoooou/buou-coding/blob/main/License
     email: 769329489@qq.com
     group:
       admin:
@@ -89,4 +89,4 @@ knife4j:
 
 logging:
   level:
-    com.github.paicoding.forum.service.rank.service.impl.*: debug # 指定具体包下的日志输出级别
+    com.github.buoooou.service.rank.service.impl.*: debug # 指定具体包下的日志输出级别
