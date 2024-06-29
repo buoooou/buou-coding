@@ -27,13 +27,7 @@ public enum AISourceEnum {
     /**
      * 硅基
      */
-    SILICON_CLOUD(4, "硅基") {
-        @Override
-        public boolean asyncSupport() {
-            return false;
-        }
-    },
-    ;
+    SILICON_CLOUD(4, "硅基");
 
     private String name;
     private Integer code;

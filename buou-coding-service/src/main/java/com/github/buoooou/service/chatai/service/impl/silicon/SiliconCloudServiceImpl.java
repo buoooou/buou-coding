@@ -25,9 +25,16 @@ public class SiliconCloudServiceImpl extends AbsChatService {
 
     @Override
     public AiChatStatEnum doAnswer(Long user, ChatItemVo chat) {
+        return AiChatStatEnum.IGNORE;
+    }
+
+    @Override
+    public AiChatStatEnum doAsyncAnswer(Long user, ChatRecordsVo response, BiConsumer<AiChatStatEnum, ChatRecordsVo> consumer) {
+
+        ChatItemVo item = response.getRecords().get(0);
         client = siliconCloudIntegration.getOkHttpClient();
         MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, buildBody(chat.getQuestion()));
+        RequestBody body = RequestBody.create(mediaType, buildBody(item.getQuestion()));
         Request request = new Request.Builder()
                 .url(siliconCloudIntegration.getConfig().getHostUrl())
                 .post(body)
@@ -44,22 +51,20 @@ public class SiliconCloudServiceImpl extends AbsChatService {
             SiliconCloudIntegration.ResponseData responseData =
                     JsonUtil.toObj(responseBody.string(), SiliconCloudIntegration.ResponseData.class);
 
-            chat.appendAnswer(responseData.getChoices().get(0).getMessage().getContent());
+            item.appendAnswer(responseData.getChoices().get(0).getMessage().getContent())
+                    .setAnswerType(ChatAnswerTypeEnum.STREAM_END);
+
+            consumer.accept(AiChatStatEnum.END, response);
             if (log.isDebugEnabled()) {
                 log.debug("siliconCloud返回内容: {}", responseData);
             }
         } catch (IOException e) {
-            log.warn("silicon 连接失败! {}", chat, e);
+            log.warn("silicon 连接失败! {}", item, e);
             // 返回异常的场景
-            chat.appendAnswer("Error:" + e)
+            item.appendAnswer("Error:" + e.getMessage())
                     .setAnswerType(ChatAnswerTypeEnum.STREAM_END);
+            consumer.accept(AiChatStatEnum.ERROR, response);
         }
-        return AiChatStatEnum.END;
-
-    }
-
-    @Override
-    public AiChatStatEnum doAsyncAnswer(Long user, ChatRecordsVo response, BiConsumer<AiChatStatEnum, ChatRecordsVo> consumer) {
         return AiChatStatEnum.IGNORE;
     }
 
