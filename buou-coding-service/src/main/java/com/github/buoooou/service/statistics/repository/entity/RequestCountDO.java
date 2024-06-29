@@ -34,4 +34,9 @@ public class RequestCountDO extends BaseDO {
      * 当前日期
      */
     private Date date;
+
+    /**
+     * 地址信息
+     */
+    private String zone;
 }
