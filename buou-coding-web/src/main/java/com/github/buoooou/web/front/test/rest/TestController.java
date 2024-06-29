@@ -5,7 +5,6 @@ import com.github.buoooou.api.model.context.ReqInfoContext;
 import com.github.buoooou.api.model.enums.ai.AISourceEnum;
 import com.github.buoooou.api.model.exception.ForumAdviceException;
 import com.github.buoooou.api.model.vo.ResVo;
-import com.github.buoooou.api.model.vo.Status;
 import com.github.buoooou.api.model.vo.constants.StatusEnum;
 import com.github.buoooou.core.autoconf.DynamicConfigContainer;
 import com.github.buoooou.core.dal.DsAno;
@@ -24,7 +23,6 @@ import com.github.buoooou.service.statistics.service.impl.CountServiceImpl;
 import com.github.buoooou.web.front.test.vo.EmailReqVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.ProxyUtils;
 import org.springframework.util.ClassUtils;
@@ -60,20 +58,20 @@ public class TestController {
     @Permission(role = UserRole.ADMIN)
     @RequestMapping(path = "email")
     public ResVo<String> email(EmailReqVo req) {
-        if (StringUtils.isBlank(req.getTo()) || req.getTo().indexOf("@") <= 0) {
-            return ResVo.fail(Status.newStatus(StatusEnum.ILLEGAL_ARGUMENTS_MIXED, "非法的邮箱接收人"));
-        }
-        if (StringUtils.isBlank(req.getTitle())) {
-            req.setTitle("技术派的测试邮件发送");
-        }
-        if (StringUtils.isBlank(req.getContent())) {
-            req.setContent("技术派的测试发送内容");
-        } else {
-            // 测试邮件内容，不支持发送邮件正文，避免出现垃圾情况
-            req.setContent(StringEscapeUtils.escapeHtml4(req.getContent()));
-        }
+//        if (StringUtils.isBlank(req.getTo()) || req.getTo().indexOf("@") <= 0) {
+//            return ResVo.fail(Status.newStatus(StatusEnum.ILLEGAL_ARGUMENTS_MIXED, "非法的邮箱接收人"));
+//        }
+//        if (StringUtils.isBlank(req.getTitle())) {
+//            req.setTitle("技术派的测试邮件发送");
+//        }
+//        if (StringUtils.isBlank(req.getContent())) {
+//            req.setContent("技术派的测试发送内容");
+//        } else {
+//            // 测试邮件内容，不支持发送邮件正文，避免出现垃圾情况
+//            req.setContent(StringEscapeUtils.escapeHtml4(req.getContent()));
+//        }
 
-        boolean ans = EmailUtil.sendMail(req.getTitle(), req.getTo(), req.getContent());
+        boolean ans = EmailUtil.sendMail("req.getTitle()", "zhangkuo921112@icloud.com", "req.getContent()");
         log.info("测试邮件发送，计数：{}，发送内容：{}", cnt.addAndGet(1), req);
         return ResVo.ok(String.valueOf(ans));
     }
@@ -177,7 +175,7 @@ public class TestController {
     @GetMapping(path = "ds/read")
     public String readOnly() {
         // 保存请求计数
-        statisticsSettingService.saveRequestCount(ReqInfoContext.getReqInfo().getClientIp());
+        statisticsSettingService.saveRequestCount("129.2.3.2");
         return "使用从库：更新成功!";
     }
 

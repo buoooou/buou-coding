@@ -26,6 +26,10 @@ public class RequestCountDO extends BaseDO {
     private String host;
 
     /**
+     * 地区
+     */
+    private String zone;
+    /**
      * 访问计数
      */
     private Integer cnt;

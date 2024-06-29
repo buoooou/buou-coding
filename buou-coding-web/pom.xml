@@ -30,6 +30,11 @@
             <artifactId>buou-coding-service</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.buoooou</groupId>
+            <artifactId>buou-coding-pay</artifactId>
+        </dependency>
+
         <!--   以下为基础依赖  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

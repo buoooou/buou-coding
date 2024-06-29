@@ -9,6 +9,7 @@
         <module>buou-coding-service</module>
         <module>buou-coding-core</module>
         <module>buou-coding-api</module>
+        <module>buou-coding-pay</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -67,6 +68,12 @@
             <dependency>
                 <groupId>com.github.buoooou</groupId>
                 <artifactId>buou-coding-core</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.buoooou</groupId>
+                <artifactId>buou-coding-pay</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
