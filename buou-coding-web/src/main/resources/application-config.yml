@@ -6,10 +6,10 @@ view:
     websiteLogoUrl: https://buoucoding.com/img/icon.png
     websiteFaviconIconUrl: https://buoucoding.com/img/icon.png
     zsxqUrl: https://buoucoding.com/article/detail/314
-    zsxqPosterUrl: forum/image/wxpay.png
+    zsxqPosterUrl: https://buoucoding.com/forum/image/wxpay.png
     contactMeTitle: 联系我 - kafeihu92
-    contactMeWxQrCode: forum/image/actor.png
-    contactMeStarQrCode: forum/image/wxpay.png
+    contactMeWxQrCode: https://buoucoding.com/forum/image/actor.png
+    contactMeStarQrCode: https://buoucoding.com/forum/image/wxpay.png
     pageSize: 20
     cdnImgStyle:
     websiteRecord: 我的super备案
