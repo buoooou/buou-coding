@@ -219,7 +219,7 @@ public class SidebarServiceImpl implements SidebarService {
     private SideBarDTO subscribeSideBar() {
         return new SideBarDTO().setTitle("订阅").setSubTitle("kafeihu92")
                 .setImg("forum/image/wxpay.png")
-                .setContent("为爱发电ing")
+                .setContent("赞赏码==>>")
                 .setStyle(SidebarStyleEnum.SUBSCRIBE.getStyle());
     }
 

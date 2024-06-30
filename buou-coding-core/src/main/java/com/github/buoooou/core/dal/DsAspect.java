@@ -18,7 +18,7 @@ public class DsAspect {
     /**
      * 切入点, 拦截类上、方法上有注解的方法，用于切换数据源
      */
-    @Pointcut("@annotation(com.github.paicoding.forum.core.dal.DsAno) || @within(com.github.paicoding.forum.core.dal.DsAno)")
+    @Pointcut("@annotation(com.github.buoooou.core.dal.DsAno) || @within(com.github.buoooou.core.dal.DsAno)")
     public void pointcut() {
     }
 
