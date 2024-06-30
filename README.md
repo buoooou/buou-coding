@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://paicoding.com/">
-    <img src="https://cdn.tobebetterjavaer.com/images/README/1681354262213.png" alt="技术派" width="400">
+    <img src="https://cdn.tobebetterjavaer.com/images/README/1681354262213.png" alt="布欧社区" width="400">
   </a>
 </p>
-一个基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等技术栈实现的社区系统，采用主流的互联网技术架构、全新的UI设计、支持一键源码部署，拥有完整的文章&教程发布/搜索/评论/统计流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发/实战的现代化社区项目👍 。
+一个基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等技术栈实现的社区系统，采用主流的互联网技术架构、全新的UI设计、支持一键源码部署，拥有完整的文章&教程发布/搜索/评论/统计流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发/实战的现代化社区项目 。
 <br><br>
 <p align="center">
   <a href="https://paicoding.com/article/detail/15"><img src="https://img.shields.io/badge/技术派-学习圈子-brightgreen.svg?style=for-the-badge"></a>
@@ -211,10 +211,6 @@ mvn clean install -DskipTests=true -Pprod
 > [环境搭建 & 基于源码的部署教程](docs/安装环境.md)
 > [服务器启动教程](docs/服务器启动教程.md)
 
-## 五、友情链接
-
-- [toBeBetterjavaer](https://github.com/itwanger/toBeBetterJavaer) ：一份通俗易懂、风趣幽默的Java学习指南，内容涵盖Java基础、Java并发编程、Java虚拟机、Java企业级开发、Java面试等核心知识点。学Java，就认准二哥的Java进阶之路😄
-- [paicoding-admin](https://github.com/itwanger/paicoding-admin) ：🚀🚀🚀 paicoding-admin，技术派管理端，基于 React18、React-Router v6、React-Hooks、Redux、TypeScript、Vite3、Ant-Design 5.x、Hook Admin、ECharts 的一套社区管理系统，够惊艳哦。
 
 ## 六、鸣谢
 
@@ -223,21 +219,10 @@ mvn clean install -DskipTests=true -Pprod
 ![JetBrains Logo (Main) logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)
 
 
-## 七、star 趋势图
-
-[![Star History Chart](https://api.star-history.com/svg?repos=itwanger/paicoding&type=Date)](https://star-history.com/#itwanger/paicoding&Date)
-
-## 八、公众号
-
-GitHub 上标星 10000+ 的开源知识库《 [二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer) 》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 8700+ 的 Java 教程](https://javabetter.cn/overview/)
-
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号，回复 **222** 即可免费领取。
-
-![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 ## 九、许可证
 
 [Apache License 2.0](https://github.com/itwanger/paicoding/edit/main/README.md)
 
-Copyright (c) 2022-2023 技术派（楼仔、沉默王二、一灰、小超）
+Copyright (c) 2022-2024 布欧社区
 
