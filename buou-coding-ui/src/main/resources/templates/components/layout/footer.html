@@ -10,7 +10,7 @@
                href="https://buoucoding.com"
                th:text="'© 2022-' + ${#dates.format(#dates.createNow(), 'yyyy')} + ' 布欧社区 '"
                target="_blank">
-                © 2016-2023 布欧社区
+                © 2022-2023 布欧社区
             </a>
         </div>
         <div class="stats-container">
@@ -22,8 +22,8 @@
             <div class="stats-row">
                 &nbsp;&nbsp;今日访问次数&nbsp;&nbsp;<span class="visit_cnt"
                                                     th:text="${global.todaySiteStatisticInfo.pv}">957810</span>
-                &nbsp;&nbsp;用户次数&nbsp;&nbsp;<span class="visit_cnt"
-                                                  th:text="${global.todaySiteStatisticInfo.uv}">153147</span>
+                &nbsp;&nbsp;今日用户次数&nbsp;&nbsp;<span class="visit_cnt"
+                                                    th:text="${global.todaySiteStatisticInfo.uv}">153147</span>
                 &nbsp;&nbsp;此时&nbsp;&nbsp;<span class="visit_cnt" th:text="${global.onlineCnt}">12</span>&nbsp;&nbsp;人在线
             </div>
         </div>

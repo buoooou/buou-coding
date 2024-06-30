@@ -48,7 +48,7 @@
   /* border-bottom: 1px solid #dee2e6; */
   position: sticky;
   --tw-bg-opacity: 1;
-  background-color: rgba(36, 41, 47, var(--tw-bg-opacity));
+  background-color: #675151;
 }
 .nav-right {
   display: flex;

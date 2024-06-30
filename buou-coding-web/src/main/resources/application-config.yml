@@ -12,7 +12,7 @@ view:
     contactMeStarQrCode: https://buoucoding.com/forum/image/wxpay.png
     pageSize: 20
     cdnImgStyle:
-    websiteRecord: 我的super备案
+    websiteRecord: 备案
     wxLoginUrl: http://weixin.qq.com/r/WxwpMefE-rqBraNS90lJ
     host: http://127.0.0.1:${server.port}
     siteHost: https://buoucoding.com
